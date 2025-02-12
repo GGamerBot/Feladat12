@@ -1,64 +1,110 @@
+/* Alapvető stílusok */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f5;
-    color: #333;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  #searchInput {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 16px;
-  }
-  
-  #searchButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #searchButton:hover {
-    background-color: #0056b3;
-  }
-  
-  #results {
-    margin-top: 20px;
-  }
-  
-  .person-card {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    padding: 10px;
-    background: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .person-card img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
-  }
-  
-  .person-card .info {
-    text-align: left;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-color: #eef2f7;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Konténer stílusa */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Címsor */
+h1 {
+  font-size: 2em;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Keresési mező */
+#searchInput {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#searchInput:focus {
+  border-color: #0056b3;
+}
+
+/* Eredmények listája */
+#results {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+/* Egyes kártyák */
+.person-card {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.person-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Profilkép */
+.person-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #007bff;
+}
+
+/* Információk */
+.person-card .info {
+  text-align: left;
+}
+
+.person-card .info h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.person-card .info p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Görgetősáv stílusa */
+#results::-webkit-scrollbar {
+  width: 8px;
+}
+
+#results::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 4px;
+}
+
+#results::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
